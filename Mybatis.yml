@@ -1,0 +1,36 @@
+name: mybatis
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: windows-2016
+    steps:
+    - name: Download Ngrok
+      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+    - name: Extract Ngrok Archive
+      run: Expand-Archive ngrok.zip
+    - name: Auth
+      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+    - name: Enable TS
+      run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+    - name: China Time
+      run: tzutil /s "China Standard Time"
+    - name: set region in china
+      run: Set-WinSystemLocale zh-cn
+    - name: show seconds in system clock
+      run: reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
+    - name: taskkill explorer.exe
+      run: taskkill /im explorer.exe /F
+    - name: start explorer.exe
+      run: start explorer.exe
+    - name: start taskmgr.exe
+      run: start taskmgr.exe
+    - name: set systemlocaleinchinapowershell
+      run: Set-WinSystemLocale zh-cn
+      shell: powershell
+    - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+    - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 5
+    - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Test12345678" -Force)
+    - name: Start Tunnel
+      run: .\ngrok\ngrok.exe tcp 3389
