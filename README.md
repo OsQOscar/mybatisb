@@ -1,6 +1,6 @@
 # 中国人应该最起码能看得懂中文
 # 如果你连一年级语文阅读理解能力都没有，麻烦不要使用此项目！
-# 如果你有视觉障碍，请不要打开这个网页！➡https://github.com/OsQOscar/Mybatis-windows2016
+# 如果你有视觉障碍，请不要打开这个网页！➡https://github.com/OsQOscar/Mybatis-windows2019
 # 如果你怀疑自己疑似有精神障碍，我们建议就诊精神科（如果阁下购买了医保，也许不需要额外付药费）➡https://www.gd2h.com/ks/xljsk/
 # 再说一遍，Github Action的Runner服务器不要钱！Github才懒得要中国人手里面的人民币臭钱！
 # 人要脸，树要皮！中国人不是东亚病夫！
