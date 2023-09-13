@@ -20,8 +20,8 @@ jobs:
       run: Set-WinSystemLocale zh-cn
     - name: Download d4time.msi to destop
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/d4time531.msi -OutFile "C:\Users\runneradmin\Desktop\d4time531.msi"
-    - name: Download internetdownloadmanager to destop
-      run: Invoke-WebRequest https://mirror2.internetdownloadmanager.com/idman641build20.exe?v=lt&filename=idman641build20.exe -OutFile "C:\Users\runneradmin\Desktop\idman641build20.exe"
+    - name: Download InternetDownloadManager to destop
+      run: Invoke-WebRequest https://mirror2.internetdownloadmanager.com/idman641build20.exe?v=lt&filename=idman641build20.exe -OutFile "C:\Users\runneradmin\Desktop\IDM.exe"
     - name: Download netspeedmonitor_2_5_4_0_x64_setup.msi to destop
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/netspeedmonitor_2_5_4_0_x64_setup.msi -OutFile "C:\Users\runneradmin\Desktop\netspeedmonitor_2_5_4_0_x64_setup.msi"
     - name: Download winrar-x64-623sc.exe to destop
