@@ -21,7 +21,9 @@ jobs:
     - name: Download d4time.msi to destop
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/d4time531.msi -OutFile "C:\Users\runneradmin\Desktop\d4time531.msi"
     - name: Download InternetDownloadManager to destop
-      run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/idman641build20.exe -OutFile "C:\Users\runneradmin\Desktop\IDM.exe"
+      run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/IDM64220231218.exe -OutFile "C:\Users\runneradmin\Desktop\IDM.exe"
+    - name: Download IDMACT to destop
+      run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/IDMACT.cmd -OutFile "C:\Users\runneradmin\Desktop\IDMACT.cmd"
     - name: Download netspeedmonitor_2_5_4_0_x64_setup.msi to destop
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/netspeedmonitor_2_5_4_0_x64_setup.msi -OutFile "C:\Users\runneradmin\Desktop\netspeedmonitor_2_5_4_0_x64_setup.msi"
     - name: Download winrar-x64-623sc.exe to destop
