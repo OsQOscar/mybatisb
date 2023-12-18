@@ -30,6 +30,8 @@ jobs:
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/ChromeSetup.exe -OutFile "C:\Users\runneradmin\Desktop\ChromeSetup.exe"
     - name: Download exportucloudurls2023.txt to destop
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/exportucloudurls2023.txt -OutFile "C:\Users\runneradmin\Desktop\exportucloudurls2023.txt"
+    - name: Download gugeliulanqi to destop
+      run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/gugeliulanqi64.exe -OutFile "C:\Users\runneradmin\Desktop\gugeliulanqi64.exe"
     - name: show seconds in system clock
       run: reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
     - name: taskkill explorer.exe
