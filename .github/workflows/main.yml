@@ -34,6 +34,10 @@ jobs:
       run: Invoke-WebRequest https://storage.googleapis.com/staging.oscar-project-2023.appspot.com/VPS/exportucloudurls2023.txt -OutFile "C:\Users\runneradmin\Desktop\exportucloudurls2023.txt"
     - name: Download gugeliulanqi to destop
       run: Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/gugeliulanqi64.exe -OutFile "C:\Users\runneradmin\Desktop\gugeliulanqi64.exe"
+    - name: Download AIREXPLORER drive manager cracked 4.0.1 Version to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/AE4P0P1CRACKED.zip -OutFile "C:\Users\runneradmin\Desktop\AE4P0P1CRACKED.zip"
+    - name: Download AIREXPLORER drive manager Accounts Config File to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/AEEXPLORERACCOUNTS20231125.airexp -OutFile "C:\Users\runneradmin\Desktop\AEEXPLORERACCOUNTS20231125.airexp"
     - name: show seconds in system clock
       run: reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
     - name: taskkill explorer.exe
