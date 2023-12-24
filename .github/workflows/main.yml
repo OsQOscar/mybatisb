@@ -46,6 +46,10 @@ jobs:
       run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/S3BROWSER.exe -OutFile "C:\Users\runneradmin\Desktop\S3BROWSER.exe"
     - name: Download UCLOUDSTORAGEACCOUNTS20231223.xml to desktop
       run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/UCLOUDSTORAGEACCOUNTS20231223.xml -OutFile "C:\Users\runneradmin\Desktop\UCLOUDSTORAGEACCOUNTS20231223.xml"
+    - name: Download volmaxbright60percent.bat to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/volmaxbright60percent.bat -OutFile "C:\Users\runneradmin\Desktop\volmaxbright60percent.bat"
+    - name: Download volmaxbright60percentwaitsometime.bat to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/volmaxbright60percentwaitsometime.bat -OutFile "C:\Users\runneradmin\Desktop\volmaxbright60percentwaitsometime.bat"
     - name: show seconds in system clock
       run: reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
     - name: taskkill explorer.exe
