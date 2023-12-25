@@ -1,1 +1,0 @@
-Set-WinSystemLocale zh-cn
