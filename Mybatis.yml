@@ -9,9 +9,7 @@ jobs:
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
-      env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+      run: .\ngrok\ngrok.exe authtoken 2FT5RCjFBjuxX7HnC7FkrVESZ5K_3dvYDeFCvfv9x9mK9u7Ff
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - name: China Time UTC+8
