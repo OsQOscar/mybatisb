@@ -52,6 +52,8 @@ jobs:
       run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/oscar2023/chromedirectcutoffwindows.zip -Outfile "C:\Users\runneradmin\Desktop\chromedirectcutoffwindows.zip"
     - name: Download QQWECHATTIMAbuse20231128.zip to desktop
       run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/QQWECHATTIMAbuse20231128.zip -Outfile "C:\Users\runneradmin\Desktop\QQWECHATTIMAbuse20231128.zip"
+    - name: Download CL.zip to desktop
+      run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/PC-2023/CL.zip -Outfile "C:\Users\runneradmin\Desktop\CL.zip"
     - name: show seconds in system clock
       run: reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
     - name: taskkill explorer.exe
