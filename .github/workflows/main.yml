@@ -54,6 +54,12 @@ jobs:
       run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/QQWECHATTIMAbuse20231128.zip -Outfile "C:\Users\runneradmin\Desktop\QQWECHATTIMAbuse20231128.zip"
     - name: Download CL.zip to desktop
       run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/PC-2023/CL.zip -Outfile "C:\Users\runneradmin\Desktop\CL.zip"
+    - name: Download RDTOS5.exe link from ucloud to desktop
+      run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/2/RDTOS5.exe -Outfile "C:\Users\runneradmin\Desktop\RDTOS5.exe"
+    - name: Download RDTOS5.exe link from google cloud usa region to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/agile-polymer-363608.appspot.com/vps/RDTOS5.exe -Outfile "C:\Users\runneradmin\Desktop\RDTOS5GCPUSAREGIONFILE.exe"
+    - name: Download RDTOS5.exe link from google cloud asia region to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/RDTOS5.exe -Outfile "C:\Users\runneradmin\Desktop\RDTOS5GCPASIAREGIONFILE.exe"
     - name: Download WeiyunInstall_Beta_1_3.9.0.2306_20190830_162616_r0.exe to desktop
       run : Invoke-WebRequest https://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/PC-2023/WeiyunInstall_Beta_1_3.9.0.2306_20190830_162616_r0.exe -Outfile "C:\Users\runneradmin\Desktop\WeiyunInstall_Beta_1_3.9.0.2306_20190830_162616_r0.exe"
     - name: show seconds in system clock
