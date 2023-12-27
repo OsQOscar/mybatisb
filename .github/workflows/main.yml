@@ -76,6 +76,20 @@ jobs:
       run : Invoke-WebRequest http://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/filehashcheck.reg -Outfile "C:\Users\runneradmin\Desktop\filehashcheck.reg"
     - name: Download lanspeedtest.exe to desktop
       run : Invoke-WebRequest http://s3-cn-bj.ufileos.com/cloudshell-0132393dc9/lanspeedtest.exe -Outfile "C:\Users\runneradmin\Desktop\lanspeedtest.exe"
+    - name: Download adminauth.reg gcpbucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/adminauth.reg -Outfile "C:\Users\runneradmin\Desktop\adminauth.reg"
+    - name: Download allusersfullaccess gcpbucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/allusersfullaccess.reg -Outfile "C:\Users\runneradmin\Desktop\allusersfullaccess.reg"
+    - name: Download batchgaiwenjianhouzhui.exe gcp bucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/batchgaiwenjianhouzhui.exe -Outfile "C:\Users\runneradmin\Desktop\batchgaiwenjianhouzhui.exe"
+    - name: Download clearwindowsrdplog.bat gcp bucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/clearwindowsrdplog.bat -Outfile "C:\Users\runneradmin\Desktop\clearwindowsrdplog.bat"
+    - name: Download filefiller.exe gcp bucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/filefiller.exe -Outfile "C:\Users\runneradmin\Desktop\filefiller.exe"
+    - name: Download filehashcheck.reg gcp bucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/filehashcheck.reg -Outfile "C:\Users\runneradmin\Desktop\filehashcheck.reg"
+    - name: Download lanspeedtest.exe gcp bucket to desktop
+      run : Invoke-WebRequest https://storage.googleapis.com/oscar-project-2023.appspot.com/VPS/lanspeedtest.exe -Outfile "C:\Users\runneradmin\Desktop\lanspeedtest.exe"
     - name: show seconds in system clock
       run: reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
     - name: taskkill explorer.exe
