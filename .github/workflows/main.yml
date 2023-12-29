@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: windows-2019
+    timeout-minutes: 600
     steps:
     - name: Download Ngrok
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
@@ -110,3 +111,4 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Test12345678" -Force)
     - name: Start Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
+      timeout-minutes: 600
