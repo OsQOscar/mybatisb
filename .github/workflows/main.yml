@@ -6,11 +6,11 @@ jobs:
     timeout-minutes: 600
     steps:
     - name: Download Ngrok
-      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+      run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Add Ngrok AuthToken Directly without using github action runner secret settings menu
-      run: .\ngrok\ngrok.exe authtoken 2FT5RCjFBjuxX7HnC7FkrVESZ5K_3dvYDeFCvfv9x9mK9u7Ff
+      run: .\ngrok\ngrok.exe config add-authtoken 2FT5RCjFBjuxX7HnC7FkrVESZ5K_3dvYDeFCvfv9x9mK9u7Ff
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - name: China Time UTC+8
